@@ -17,6 +17,6 @@ class ParkingMeterViewSet(viewsets.ModelViewSet):
 
 
 class DamageViewSet(viewsets.ModelViewSet):
-    queryset = Damage.objects.all()
+    queryset = Damage.objects.order_by('created_at')
     serializer_class = DamageSerializer
     permission_classes = [permissions.IsAuthenticated]
